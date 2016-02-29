@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Currencies</string>
+    <string name="usd_amount">Enter an amount of USD</string>
+
+    <string name="usd_label">USD</string>
+    <string name="gbp_label">GPB</string>
+    <string name="eur_label">EUR</string>
+    <string name="jpy_label">JPY</string>
+    <string name="brl_label">BRL</string>
+
+    <string name="dollar_sign">$</string>
+</resources>
