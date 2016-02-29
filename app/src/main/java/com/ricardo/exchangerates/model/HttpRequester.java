@@ -13,9 +13,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ricardo.exchangerates.Constants;
 
-/**
- * Created by Ricardo on 27/02/2016.
- */
 public class HttpRequester {
 
     RequestQueue queue;
@@ -25,7 +22,7 @@ public class HttpRequester {
         void onDataRetrieved(String result);
     }
 
-    public void get(Context context, String url, final Listener listener) {
+    public void get(final Context context, final String url, final Listener listener) {
 
         queue = Volley.newRequestQueue(context);
 
@@ -42,6 +39,8 @@ public class HttpRequester {
             public void onErrorResponse(VolleyError error) {
 
                 Log.d("App", "onErrorResponse " + error.toString());
+
+                get(context, url, listener);
             }
         });
 
