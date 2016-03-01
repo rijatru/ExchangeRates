@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
         String dayString = String.valueOf(day);
 
         if (month < 10) monthString = "0" + monthString;
-        if (day < 10) dayString = "0" + monthString;
+        if (day < 10) dayString = "0" + dayString;
 
         return year + "-" + monthString + "-" + dayString;
     }
@@ -344,7 +344,7 @@ public class MainActivity extends AppCompatActivity {
 
         axisY.setName(getString(R.string.usd_label));
 
-        List<AxisValue> axisValues = new ArrayList<AxisValue>();
+        List<AxisValue> axisValues = new ArrayList<>();
 
         for (int i = 0; i < labels.length; i++) {
 
